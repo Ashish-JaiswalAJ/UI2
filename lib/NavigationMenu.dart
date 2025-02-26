@@ -4,6 +4,7 @@ import 'HistoryPage.dart';
 import 'CardsPage.dart';
 import 'ProfilePage.dart';
 import 'ScanPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
@@ -29,6 +30,13 @@ class _NavigationMenuState extends State<NavigationMenu> {
       _selectedIndex = index;
     });
   }
+
+  final user=FirebaseAuth.instance.currentUser;
+
+  singout()async{
+    await FirebaseAuth.instance.signOut();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +64,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
                       onPressed: () => _onItemTapped(0),
                     ),
                     IconButton(
-                      icon: Icon(Icons.history, size: 30, color: _selectedIndex == 1 ? Colors.black : Colors.grey),
+                      icon: Icon(Icons.history, size: 30 , color: _selectedIndex == 1 ? Colors.black : Colors.grey),
                       onPressed: () => _onItemTapped(1),
                     ),
                     SizedBox(width: 50),
@@ -75,14 +83,19 @@ class _NavigationMenuState extends State<NavigationMenu> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black,
-        child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 30),
-        onPressed: () {
-          setState(() {
-            _selectedIndex = 2;
-          });
-        },
+      floatingActionButton: SizedBox(
+        height: 60,
+        width: 60,
+        child: FloatingActionButton(
+          shape: CircleBorder(),
+          backgroundColor: Colors.black,
+          child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 30),
+          onPressed: () {
+            setState(() {
+              _selectedIndex = 2;
+            });
+          },
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
