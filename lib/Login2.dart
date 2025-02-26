@@ -28,6 +28,13 @@ class _Login2State extends State<Login2> {
       print("Login Successful");
     } catch (e) {
       print("Error: $e");
+      Get.snackbar(
+        "Signup Failed",
+        e.toString(),
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
+      );
     }
   }
 
