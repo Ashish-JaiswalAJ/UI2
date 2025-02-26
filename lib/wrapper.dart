@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/HomeScreen.dart';
 import 'package:untitled/Login2.dart';
+import 'package:untitled/NavigationMenu.dart';
 import 'package:untitled/getstarted.dart';
 
 class wrapper extends StatefulWidget {
@@ -19,7 +20,7 @@ class _wrapperState extends State<wrapper> {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context,snapshot){
             if (snapshot.hasData){
-              return HomeScreen();
+              return NavigationMenu();
             }else{
               return getstarted();
             }
