@@ -19,7 +19,6 @@ class _NavigationMenuState extends State<NavigationMenu> {
   final List<Widget> _screens = [
     HomeScreen(),
     HistoryPage(),
-    ScanPage(),
     CardsPage(),
     ProfilePage(),
   ];
@@ -69,12 +68,12 @@ class _NavigationMenuState extends State<NavigationMenu> {
                     ),
                     SizedBox(width: 50),
                     IconButton(
-                      icon: Icon(Icons.credit_card, size: 30, color: _selectedIndex == 3 ? Colors.black : Colors.grey),
-                      onPressed: () => _onItemTapped(3),
+                      icon: Icon(Icons.credit_card, size: 30, color: _selectedIndex == 2 ? Colors.black : Colors.grey),
+                      onPressed: () => _onItemTapped(2),
                     ),
                     IconButton(
-                      icon: Icon(Icons.person_outlined, size: 30, color: _selectedIndex == 4 ? Colors.black : Colors.grey),
-                      onPressed: () => _onItemTapped(4),
+                      icon: Icon(Icons.person_outlined, size: 30, color: _selectedIndex == 3 ? Colors.black : Colors.grey),
+                      onPressed: () => _onItemTapped(3),
                     ),
                   ],
                 ),
@@ -91,9 +90,10 @@ class _NavigationMenuState extends State<NavigationMenu> {
           backgroundColor: Colors.black,
           child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 30),
           onPressed: () {
-            setState(() {
-              _selectedIndex = 2;
-            });
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ScanPage()),
+            );
           },
         ),
       ),

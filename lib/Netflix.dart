@@ -3,20 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/getstarted.dart';
 
-class ProfilePage extends StatefulWidget {
+class Netflix extends StatefulWidget {
+  const Netflix({super.key});
+
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  State<Netflix> createState() => _NetflixState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
-
-  final user=FirebaseAuth.instance.currentUser;
-
-  signOut()async{
-    await FirebaseAuth.instance.signOut();
-    Get.offAll(() => getstarted());
-  }
-
+class _NetflixState extends State<Netflix> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,31 +51,6 @@ class _ProfilePageState extends State<ProfilePage> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 120),
-                  GestureDetector(
-                    onTap: signOut,
-                    child: Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                            border: Border.all(
-                              color: Color(0xFFC1C1C1),
-                              width: 1,
-                            ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black,
-                            blurRadius: 4,
-                            spreadRadius: 0,
-                            offset: Offset(2, 2)
-                          )
-                        ],
-                      ),
-                      child: Image.asset('assets/getstarted/bell.png'),
-                    ),
-                  )
 
                 ],
               ),
@@ -173,92 +142,26 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
-            SizedBox(height: 50,),
-            Container(
-              margin: EdgeInsets.only(left: 10),
-              width: 300,
-              height: 180,
-              child: Stack(
+            SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
                 children: [
-                  Container(
-                    width: 279,
-                    height: 162,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.25),
-                            blurRadius: 4,
-                            spreadRadius: 0,
-                            offset: Offset(10, 10)
-                        )
-                      ],
-                    ),
-                    child: Image.asset('assets/getstarted/Group 8.png'),// Bottom container
-                  ),
-                  Positioned(
-                    top: 0, // Move slightly down
-                    left: 0, // Move slightly right
-                    child: Container(
-                      width: 279,
-                      height: 162,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black.withOpacity(0.25),
-                              blurRadius: 4,
-                              spreadRadius: 0,
-                              offset: Offset(10, 10)
-                          )
-                        ],
+                  Text('Recent Transactions', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600, color: Colors.black),),
+                  SizedBox(width: 110,),
+                  Column(
+                    children: [
+                      Text('See All', style: TextStyle(fontSize: 15, color: Color(0xFF999898),),),
+                      Container(
+                        height: 1,
+                        width: 50,
+                        color: Color(0xFF999898),
                       ),
-                      child: Image.asset('assets/getstarted/Group 7.png'),// Bottom container
-                    ),
-                  ),
-                  Positioned(
-                    top: 0, // Move even further down
-                    left: 0, // Move even further right
-                    child: Container(
-                      width: 279,
-                      height: 162,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black.withOpacity(0.25),
-                              blurRadius: 4,
-                              spreadRadius: 0,
-                              offset: Offset(10, 10)
-                          )
-                        ],
-                      ),
-                      child: Image.asset('assets/getstarted/Group 6.png'),// Bottom container
-                    ),
+                    ],
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20,),
-            Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Row(
-                  children: [
-                    Text('Recent Transactions', style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600, color: Colors.black),),
-                    SizedBox(width: 110,),
-                    Column(
-                      children: [
-                        Text('See All', style: TextStyle(fontSize: 15, color: Color(0xFF999898),),),
-                        Container(
-                          height: 1,
-                          width: 50,
-                          color: Color(0xFF999898),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
             SizedBox(height: 10,),
             Container(
               height: 56,
