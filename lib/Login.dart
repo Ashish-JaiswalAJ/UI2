@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:untitled/HomeScreen.dart';
-import 'package:untitled/NavigationMenu.dart';
-import 'package:untitled/wrapper.dart';
+import 'package:paymentapp/HomeScreen.dart';
+import 'package:paymentapp/NavigationMenu.dart';
+import 'package:paymentapp/wrapper.dart';
 import 'package:get/get.dart';
 import 'Login2.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -13,9 +14,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
-  TextEditingController email=TextEditingController();
-  TextEditingController password=TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
 
   signUp() async {
     try {
@@ -37,7 +37,6 @@ class _LoginState extends State<Login> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,17 +45,17 @@ class _LoginState extends State<Login> {
           child: Column(
             children: [
               Container(
-
                 height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/getstarted/WhatsApp Image 2025-02-08 at 15.42.19 (3) 1.png'),
-
+                    image: AssetImage(
+                        'assets/getstarted/WhatsApp Image 2025-02-08 at 15.42.19 (3) 1.png'),
                   ),
                 ),
               ),
               Text("Hey there", style: TextStyle(fontSize: 16)),
-              Text("Create an Account", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text("Create an Account",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
               SizedBox(height: 21),
               Container(
                 height: 54,
@@ -68,7 +67,8 @@ class _LoginState extends State<Login> {
                 child: Row(
                   children: [
                     SizedBox(width: 10),
-                    Icon(Icons.person_2_outlined, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.person_2_outlined,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
@@ -76,7 +76,8 @@ class _LoginState extends State<Login> {
                           labelText: "First Name",
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                   ],
@@ -93,7 +94,8 @@ class _LoginState extends State<Login> {
                 child: Row(
                   children: [
                     SizedBox(width: 10),
-                    Icon(Icons.person_2_outlined, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.person_2_outlined,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
@@ -101,7 +103,8 @@ class _LoginState extends State<Login> {
                           labelText: "Last Name",
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                   ],
@@ -118,7 +121,8 @@ class _LoginState extends State<Login> {
                 child: Row(
                   children: [
                     SizedBox(width: 15),
-                    Icon(Icons.email_outlined, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.email_outlined,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
@@ -127,7 +131,8 @@ class _LoginState extends State<Login> {
                           labelText: "Email or Mobile number",
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                   ],
@@ -144,7 +149,8 @@ class _LoginState extends State<Login> {
                 child: Row(
                   children: [
                     SizedBox(width: 10),
-                    Icon(Icons.lock_outline, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.lock_outline,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
@@ -153,7 +159,8 @@ class _LoginState extends State<Login> {
                           labelText: "Password",
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                   ],
@@ -169,10 +176,15 @@ class _LoginState extends State<Login> {
                 child: Row(
                   children: [
                     SizedBox(width: 5),
-                    Icon(Icons.check_box_outline_blank, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.check_box_outline_blank,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 5),
                     Expanded(
-                      child: Text('By continuing you accept our Privacy Policy and Term of Use',style: TextStyle(fontSize: 14, color: Color(0xFF808080)),),
+                      child: Text(
+                        'By continuing you accept our Privacy Policy and Term of Use',
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                      ),
                     ),
                   ],
                 ),
@@ -198,11 +210,9 @@ class _LoginState extends State<Login> {
               Container(
                 height: 40,
                 width: 345,
-                decoration: BoxDecoration(
-
-                    borderRadius: BorderRadius.circular(11)
-                ),
-                child:Row(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(11)),
+                child: Row(
                   children: [
                     Expanded(
                       child: Divider(
@@ -214,7 +224,8 @@ class _LoginState extends State<Login> {
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
                         "Or",
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                     Expanded(
@@ -238,22 +249,27 @@ class _LoginState extends State<Login> {
               Container(
                 height: 40,
                 width: 260,
-                decoration: BoxDecoration(
-
-                    borderRadius: BorderRadius.circular(11)
-                ),
-                child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(11)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('Already Have an account?',style: TextStyle(fontSize: 15),),
+                    Text(
+                      'Already Have an account?',
+                      style: TextStyle(fontSize: 15),
+                    ),
                     GestureDetector(
                         onTap: () => Get.to(() => Login2()),
-                        child: Text('Log in',style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),)),
+                        child: Text(
+                          'Log in',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        )),
                   ],
                 ),
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 }

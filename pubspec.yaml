@@ -1,4 +1,4 @@
-name: untitled
+name: paymentapp
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -41,6 +41,13 @@ dependencies:
   get: ^4.7.2
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/logo.png"
+
   flutter_test:
     sdk: flutter
 

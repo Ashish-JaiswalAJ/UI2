@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/NavigationMenu.dart';
+import 'package:paymentapp/NavigationMenu.dart';
 
 class ScanPage extends StatefulWidget {
   const ScanPage({super.key});
@@ -24,29 +24,40 @@ class _ScanPageState extends State<ScanPage> {
         ),
         child: Column(
           children: [
-            SizedBox(height: 40,),
+            SizedBox(
+              height: 40,
+            ),
             Padding(
-              padding: const EdgeInsets.only(left: 25,top: 10),
+              padding: const EdgeInsets.only(left: 25, top: 10),
               child: Row(
                 children: [
                   GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => NavigationMenu()),
+                          MaterialPageRoute(
+                              builder: (context) => NavigationMenu()),
                         );
                       },
-                      child: Icon(Icons.arrow_back_ios,size: 25,color: Colors.white,)),
-                  SizedBox(width: 290,),
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        size: 25,
+                        color: Colors.white,
+                      )),
+                  SizedBox(
+                    width: 290,
+                  ),
                   Image.asset('assets/getstarted/scanner 6.png'),
                 ],
               ),
             ),
-            SizedBox(height: 200,),
+            SizedBox(
+              height: 200,
+            ),
             Stack(
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 10,top: 10),
+                  margin: EdgeInsets.only(left: 10, top: 10),
                   width: 250,
                   height: 250,
                   color: Colors.white,
@@ -60,8 +71,6 @@ class _ScanPageState extends State<ScanPage> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-
-
                 Positioned(
                   top: 0,
                   left: 0,
@@ -76,8 +85,6 @@ class _ScanPageState extends State<ScanPage> {
                     ),
                   ),
                 ),
-
-
                 Positioned(
                   top: 0,
                   right: 0,
@@ -92,8 +99,6 @@ class _ScanPageState extends State<ScanPage> {
                     ),
                   ),
                 ),
-
-
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -108,8 +113,6 @@ class _ScanPageState extends State<ScanPage> {
                     ),
                   ),
                 ),
-
-
                 Positioned(
                   bottom: 0,
                   right: 0,
@@ -126,7 +129,9 @@ class _ScanPageState extends State<ScanPage> {
                 ),
               ],
             ),
-            SizedBox(height: 100,),
+            SizedBox(
+              height: 100,
+            ),
             Container(
               width: 250,
               height: 45,
@@ -136,9 +141,17 @@ class _ScanPageState extends State<ScanPage> {
               ),
               child: Row(
                 children: [
-                  SizedBox(width: 23,),
-                  Image.asset('assets/getstarted/scanner 6.png',height: 25,width: 25,),
-                  SizedBox(width: 30,),
+                  SizedBox(
+                    width: 23,
+                  ),
+                  Image.asset(
+                    'assets/getstarted/scanner 6.png',
+                    height: 25,
+                    width: 25,
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
                   Text(
                     'Scan QR Code',
                     style: TextStyle(fontSize: 16, color: Colors.white),

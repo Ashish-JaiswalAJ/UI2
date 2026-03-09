@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled/NavigationMenu.dart';
+import 'package:paymentapp/NavigationMenu.dart';
 import 'Login.dart';
+
 class Login2 extends StatefulWidget {
   const Login2({super.key});
 
@@ -11,17 +12,15 @@ class Login2 extends StatefulWidget {
 }
 
 class _Login2State extends State<Login2> {
-
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
 
-  Future<void>signIn() async {
+  Future<void> signIn() async {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email.text.trim(),
         password: password.text.trim(),
       );
-
 
       // Navigate to NavigationMenu after successful login
       Get.offAll(() => NavigationMenu());
@@ -38,7 +37,6 @@ class _Login2State extends State<Login2> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,19 +45,18 @@ class _Login2State extends State<Login2> {
           child: Column(
             children: [
               Container(
-
                 height: 388,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/getstarted/download 1.png'),
-
                   ),
                 ),
               ),
               SizedBox(height: 20),
               Text("Hey you’re already set!", style: TextStyle(fontSize: 16)),
               SizedBox(height: 10),
-              Text("Just log in and go", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text("Just log in and go",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
               SizedBox(height: 25),
               Container(
                 height: 54,
@@ -71,7 +68,8 @@ class _Login2State extends State<Login2> {
                 child: Row(
                   children: [
                     SizedBox(width: 15),
-                    Icon(Icons.email_outlined, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.email_outlined,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
@@ -80,7 +78,8 @@ class _Login2State extends State<Login2> {
                           labelText: "Email or Mobile number",
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                     Padding(
@@ -101,7 +100,8 @@ class _Login2State extends State<Login2> {
                 child: Row(
                   children: [
                     SizedBox(width: 10),
-                    Icon(Icons.lock_outline, color: Color(0xFF808080), size: 20),
+                    Icon(Icons.lock_outline,
+                        color: Color(0xFF808080), size: 20),
                     SizedBox(width: 10),
                     Expanded(
                       child: TextField(
@@ -110,7 +110,8 @@ class _Login2State extends State<Login2> {
                           labelText: "Password",
                           border: InputBorder.none,
                         ),
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                     Padding(
@@ -120,7 +121,6 @@ class _Login2State extends State<Login2> {
                   ],
                 ),
               ),
-
               SizedBox(height: 30),
               GestureDetector(
                 onTap: signIn,
@@ -142,11 +142,9 @@ class _Login2State extends State<Login2> {
               Container(
                 height: 40,
                 width: 345,
-                decoration: BoxDecoration(
-
-                    borderRadius: BorderRadius.circular(11)
-                ),
-                child:Row(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(11)),
+                child: Row(
                   children: [
                     Expanded(
                       child: Divider(
@@ -158,7 +156,8 @@ class _Login2State extends State<Login2> {
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
                         "Or",
-                        style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
+                        style:
+                            TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
                     Expanded(
@@ -182,22 +181,27 @@ class _Login2State extends State<Login2> {
               Container(
                 height: 40,
                 width: 260,
-                decoration: BoxDecoration(
-
-                    borderRadius: BorderRadius.circular(11)
-                ),
-                child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(11)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("Don't Have an account?",style: TextStyle(fontSize: 15),),
+                    Text(
+                      "Don't Have an account?",
+                      style: TextStyle(fontSize: 15),
+                    ),
                     GestureDetector(
                         onTap: () => Get.to(() => Login()),
-                        child: Text('Register',style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),)),
+                        child: Text(
+                          'Register',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        )),
                   ],
                 ),
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 }

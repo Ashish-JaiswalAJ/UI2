@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled/getstarted.dart';
+import 'package:paymentapp/getstarted.dart';
 
 class ProfilePage extends StatefulWidget {
   @override

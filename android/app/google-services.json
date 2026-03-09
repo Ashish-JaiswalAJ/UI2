@@ -1,21 +1,40 @@
 {
   "project_info": {
-    "project_number": "677504209020",
-    "project_id": "fir-auth-df65e",
-    "storage_bucket": "fir-auth-df65e.firebasestorage.app"
+    "project_number": "1060670859846",
+    "project_id": "ui-2-15c64",
+    "storage_bucket": "ui-2-15c64.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:677504209020:android:40e2148fec7a5c5af139f9",
+        "mobilesdk_app_id": "1:1060670859846:android:d7832832e8476d14afb847",
         "android_client_info": {
-          "package_name": "com.example.untitled"
+          "package_name": "com.example.UI2"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDDHifWktO_47fB_GoybD0ruhQ7L39Jf40"
+          "current_key": "AIzaSyAuKb1fXqNUmymPIq3hjkZiLmPZJRicfeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060670859846:android:4d7dc106b7bfec91afb847",
+        "android_client_info": {
+          "package_name": "com.example.paymentapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuKb1fXqNUmymPIq3hjkZiLmPZJRicfeo"
         }
       ],
       "services": {
