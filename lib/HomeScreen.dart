@@ -234,33 +234,33 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(width: 8,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/mobile 2.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/personal 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
-                          Text('  Mobile\nRecharge', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
+                          Text('Personal\n   Loan', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
                       ),
                       SizedBox(width: 40,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/lamp 1.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/speedometer (1) 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
-                          Text('Electricity\n     Bill', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
+                          Text('Free Credit\n     Score', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
                       ),
                       SizedBox(width: 40,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/gas 1.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/gold-ingots 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
-                          Text('    Gas\nCylinder', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
+                          Text('Gold\nLoan', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
                       ),
                       SizedBox(width: 40,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/house 1.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/money 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
-                          Text('  Rent\nHouse', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
+                          Text('Mutual\nFund Loan', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
                       ),
                     ],
@@ -317,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(width: 8,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/mobile 2.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/motorcycle 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
                           Text('Bike\nInsurance', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
@@ -325,7 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(width: 32,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/lamp 1.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/sedan 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
                           Text('Car\nInsurance', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
@@ -333,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(width: 32,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/gas 1.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/heart 1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
                           Text('Health\nInsurance', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],
@@ -341,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(width: 32,),
                       Column(
                         children: [
-                          Image.asset('assets/getstarted/house 1.jpg',height: 25,width: 25,),
+                          Image.asset('assets/getstarted/securetime1.png',height: 25,width: 25,),
                           SizedBox(height: 8,),
                           Text('Term Life\nInsurance', style: TextStyle(fontSize: 12, color: Color(0xFF707070),),),
                         ],

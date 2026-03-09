@@ -83,6 +83,10 @@ class _Login2State extends State<Login2> {
                         style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15),
+                      child: Image.asset('assets/getstarted/L1.png'),
+                    ),
                   ],
                 ),
               ),
@@ -108,6 +112,10 @@ class _Login2State extends State<Login2> {
                         ),
                         style: TextStyle(fontSize: 14, color: Color(0xFF808080)),
                       ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15),
+                      child: Image.asset('assets/getstarted/L1.png'),
                     ),
                   ],
                 ),

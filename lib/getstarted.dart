@@ -97,7 +97,7 @@ class _getstartedState extends State<getstarted> {
                 child: Center(
                   child: Text(
                     'Get Started',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),
                   ),
                 ),
               ),
